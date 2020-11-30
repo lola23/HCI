@@ -1,0 +1,28 @@
+div {
+  position:relative;
+  height: 100%;
+  width:100%;
+}
+
+div img {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  width: 200px;
+}
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
