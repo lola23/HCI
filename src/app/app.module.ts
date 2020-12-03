@@ -11,6 +11,8 @@ import { LimbaComponent } from './modules/limba/limba.component';
 import { MediuComponent } from './modules/mediu/mediu.component';
 import { AppRoutingModule } from './app.routing.module';
 
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { AppRoutingModule } from './app.routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

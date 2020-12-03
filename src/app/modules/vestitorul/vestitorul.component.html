@@ -1,1 +1,15 @@
-<p>vestitorul works!</p>
+<div class="container">
+  <div class="cerinta">
+    <h1>Da click pe un vestitor al primaverii</h1>
+  </div>
+  <div class="gallery">
+    <img (click)="handleClick(1)" [src]=image1 class="bordered" alt="Image 1">
+    <img (click)="handleClick(2)" [src]=image2 class="bordered" alt="Image 2">
+    <img (click)="handleClick(3)" [src]=image3 class="bordered" alt="Image 3">
+  </div>
+  <div class="bar">
+    <mat-progress-bar mode="determinate" [value]=progress></mat-progress-bar>
+  </div>
+</div>
+<router-outlet></router-outlet>
+
