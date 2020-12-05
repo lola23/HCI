@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   }
 
   startVideo(): void {
+    // add delay for "Acum hai sa ne jucam" audio
     this.router.navigate(['video']);
   }
 }
