@@ -23,7 +23,7 @@ const routes: Routes = [
   {
     path:'numaratore',
     component: NumaratoareComponent
-
+  },
   { path: 'vestitorul/:id',
     component: VestitorulComponent
   }
