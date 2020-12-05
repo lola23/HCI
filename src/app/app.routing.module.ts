@@ -21,7 +21,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path:'numaratore',
+    path:'numaratore/:id',
     component: NumaratoareComponent
   },
   { path: 'vestitorul/:id',

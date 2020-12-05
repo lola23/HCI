@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import{Howl} from 'howler'
 
 @Component({
@@ -10,7 +10,9 @@ import{Howl} from 'howler'
 
 export class NumaratoareComponent implements OnInit {
 
-  
+  id1:boolean=false;
+  id2:boolean=false;
+  id:number=1;
   sound = new Howl({
 
     src: ['assets/audio/winnieVrea.mp3'],
@@ -23,7 +25,7 @@ export class NumaratoareComponent implements OnInit {
 
     src: ['assets/audio/bravo.mp3'],
 
-    volume: 1,
+    volume: 1 
 
   });
   soundIncerca=new Howl({
@@ -40,20 +42,17 @@ export class NumaratoareComponent implements OnInit {
     volume: 1,
 
   });
-  id1:boolean=false;
-  id2:boolean=false;
-  id:number=2;
+ 
 
   private sub: any;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,private readonly router: Router) { }
 
   ngOnInit(): void {
 
-  //   this.sub = this.route.params.subscribe(params => {
-  //     this.id= +params['id'];
-  
-  //  });
+   this.route.params.subscribe(params => {
+      this.id= +params['id'];
+   });
    
    if(this.id===1){
     this.id1=true;
@@ -134,6 +133,7 @@ document.getElementById('sad').hidden=true;
 document.getElementById('wrong').hidden = false;
       document.getElementById('wrong2').hidden = true;
       document.getElementById('bravo').hidden = true;
+      this.soundBravo.stop();
       this.soundIncerca.play();
     }
     else if(a===2){
@@ -144,6 +144,7 @@ document.getElementById('wrong').hidden = false;
       document.getElementById('wrong').hidden = true;
 document.getElementById('wrong2').hidden = false;
 document.getElementById('bravo').hidden = true;
+this.soundBravo.stop();
 this.soundIncerca.play();
       
     }
@@ -155,8 +156,17 @@ this.soundIncerca.play();
       document.getElementById('wrong').hidden = true;
       document.getElementById('wrong2').hidden = true;
       document.getElementById('bravo').hidden = false;
+      this.soundIncerca.stop();
       this.soundBravo.play();
-    }
+//       setTimeout(() => 
+// {
+//  this.id=2;
+//  this.ngOnInit();
+// },
+// 5000);
+      
+      
+     }
 
   }
 
@@ -177,11 +187,5 @@ else if(this.id2){
   this.soundGhiocei.stop();
 }
   }
-
-  playA(){
-    this.sound.play();
-
-  }
-  
 
 }

@@ -7,7 +7,7 @@
     <h1 (mouseover)='over()' (mouseout)='out()' *ngIf="id2" id="ajuta">Ajuta-l pe Winnie sa isi gaseasca ghioceii</h1>
     <h2 (mouseover)='over()' (mouseout)='out()' *ngIf="id2" id="apasa">Apasa cu mouse-ul pe numarul corect</h2>
     <h2 (mouseover)='over()' (mouseout)='out()' *ngIf="id2" id="cati">Cati ghiocei poti numara?</h2>
-    <div class="winniediv" id="winnied" (click)="playA()">
+    <div class="winniediv" id="winnied">
         <img *ngIf="id1" src="assets/images/Rectangle 19.png" alt="winnie" id="winnie">
         <img *ngIf="id2" src="assets/images/poohflower.gif" alt="winnie" id="winnie">
     </div>
@@ -68,5 +68,5 @@
         </div>
     <!-- </ng-container> -->
 </div>
-
+<router-outlet></router-outlet>
 

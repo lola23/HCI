@@ -75,7 +75,7 @@ export class VestitorulComponent implements OnInit {
         if (this.level < 3) {
           this.router.navigate(['/vestitorul', this.level + 1]);
         } else {
-          // navigate to next game
+          this.router.navigate(['/numaratore',1]);
         }
         break;
       }
