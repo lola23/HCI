@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {MatDialog} from '@angular/material/dialog';
+import {DialogGresealaComponent} from '../../shared/dialog-greseala/dialog-greseala.component';
+import {DialogCorectComponent} from '../../shared/dialog-corect/dialog-corect.component';
+import {Howl} from 'howler';
 
 @Component({
   selector: 'app-vestitorul',
@@ -8,38 +12,88 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class VestitorulComponent implements OnInit {
 
+  modul = new Howl({
+    src: ['assets/audio/descopera_vestitorii.mp3'],
+    volume: 1,
+  });
+
+  cerinta = new Howl({
+    src: ['assets/audio/cerinta_vestitor.mp3'],
+    volume: 1,
+  });
+
+  initial = true;
   level;
   image1;
   image2;
   image3;
   answer;
   progress;
+  wrong1 = false;
+  wrong2 = false;
+  wrong3 = false;
+  dialogRef;
 
   constructor(
     private readonly route: ActivatedRoute,
     private readonly router: Router,
-  ) { }
+    public readonly dialog: MatDialog
+  ) {
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.level = parseInt(params.id, 10);
+      this.resetWrongs();
       switch (this.level) {
-        case 1:
-        {
+        case 1: {
           this.loadLevel1();
+          this.modul.play();
+          this.modul.on('end', () => {
+            this.cerinta.play();
+            this.cerinta.on('end', () => this.initial = false);
+          });
           break;
         }
-        case 2:
-        {
+        case 2: {
           this.loadLevel2();
+          this.cerinta.play();
           break;
         }
-        case 3:
-        {
+        case 3: {
           this.loadLevel3();
+          this.cerinta.play();
           break;
         }
       }
+    });
+  }
+
+  openWrongDialog(): void {
+    this.stopAllSounds();
+    this.dialogRef = this.dialog.open(DialogGresealaComponent, {
+      disableClose: true,
+      panelClass: 'dialog-nobg'
+    });
+
+    this.dialogRef.afterOpened().subscribe(_ => {
+      setTimeout(() => {
+        this.dialogRef.close();
+      }, 3700);
+    });
+  }
+
+  openCorrectDialog(): void {
+    this.stopAllSounds();
+    this.dialogRef = this.dialog.open(DialogCorectComponent, {
+      disableClose: true,
+      panelClass: 'dialog-nobg'
+    });
+
+    this.dialogRef.afterOpened().subscribe(_ => {
+      setTimeout(() => {
+        this.dialogRef.close();
+      }, 3000);
     });
   }
 
@@ -67,24 +121,57 @@ export class VestitorulComponent implements OnInit {
     this.progress = 12;
   }
 
+  resetWrongs(): void {
+    this.wrong1 = false;
+    this.wrong2 = false;
+    this.wrong3 = false;
+  }
+
   handleClick(index: number): void {
     switch (index) {
-      case this.answer:
-      {
-        // add happy winnie
-        if (this.level < 3) {
-          this.router.navigate(['/vestitorul', this.level + 1]);
-        } else {
-          this.router.navigate(['/numaratore',1]);
+      case this.answer: {
+        this.openCorrectDialog();
+        this.dialogRef.afterClosed().subscribe(() => {
+          if (this.level < 3) {
+            this.router.navigate(['/vestitorul', this.level + 1]);
+          } else {
+            this.router.navigate(['/numaratore', 1]);
+          }
+        });
+        break;
+      }
+      default: {
+        this.openWrongDialog();
+        if (index === 1) {
+          this.wrong1 = true;
+        }
+        if (index === 2) {
+          this.wrong2 = true;
+        }
+        if (index === 3) {
+          this.wrong3 = true;
         }
         break;
       }
-      default:
-      {
-        // add sad winnie
-        // put red border and make not clickable
-        break;
-      }
+    }
+  }
+
+  stopAllSounds(): void {
+    this.modul.stop();
+    this.cerinta.stop();
+  }
+
+  playModul(): void {
+    if (!this.initial) {
+      this.stopAllSounds();
+      this.modul.play();
+    }
+  }
+
+  playCerinta(): void {
+    if (!this.initial) {
+      this.stopAllSounds();
+      this.cerinta.play();
     }
   }
 }

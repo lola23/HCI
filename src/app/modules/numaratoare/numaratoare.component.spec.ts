@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { NumaratoareComponent } from './numaratoare.component';
+import {NumaratoareComponent} from './numaratoare.component';
 
 describe('NumaratoareComponent', () => {
   let component: NumaratoareComponent;
@@ -8,9 +8,9 @@ describe('NumaratoareComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NumaratoareComponent ]
+      declarations: [NumaratoareComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

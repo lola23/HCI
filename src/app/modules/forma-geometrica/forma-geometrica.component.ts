@@ -1,5 +1,6 @@
 import { Component, destroyPlatform, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-forma-geometrica',
@@ -13,6 +14,7 @@ export class FormaGeometricaComponent implements OnInit {
   level = 1;
   constructor(private readonly route: ActivatedRoute,
     private readonly router: Router) { }
+
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
