@@ -158,12 +158,12 @@ this.soundIncerca.play();
       document.getElementById('bravo').hidden = false;
       this.soundIncerca.stop();
       this.soundBravo.play();
-//       setTimeout(() => 
-// {
-//  this.id=2;
-//  this.ngOnInit();
-// },
-// 5000);
+      setTimeout(() => 
+{
+  this.router.navigate(['/forme',1]);
+
+},
+5000);
       
       
      }

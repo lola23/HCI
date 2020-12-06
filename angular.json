@@ -118,5 +118,8 @@
       }
     }
   },
-  "defaultProject": "VestitoriiPrimaverii"
+  "defaultProject": "VestitoriiPrimaverii",
+  "cli": {
+    "analytics": false
+  }
 }
