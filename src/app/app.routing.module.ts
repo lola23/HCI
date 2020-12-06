@@ -1,14 +1,15 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { VideoComponent } from './modules/video/video.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {VideoComponent} from './modules/video/video.component';
 import {HomeComponent} from './modules/home/home.component';
 
-import { NumaratoareComponent } from './modules/numaratoare/numaratoare.component';
+import {NumaratoareComponent} from './modules/numaratoare/numaratoare.component';
 import {VestitorulComponent} from './modules/vestitorul/vestitorul.component';
 
 
 const routes: Routes = [
-  { path: '',
+  {
+    path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
@@ -21,10 +22,11 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path:'numaratore/:id',
+    path: 'numaratore/:id',
     component: NumaratoareComponent
   },
-  { path: 'vestitorul/:id',
+  {
+    path: 'vestitorul/:id',
     component: VestitorulComponent
   }
 ];

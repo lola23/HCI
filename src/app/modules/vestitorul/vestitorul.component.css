@@ -1,0 +1,90 @@
+.container-all {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.container-all .bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(src/assets/images/background.png) center center;
+  background-size: cover;
+  opacity: .4;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery {
+  margin-top: 30px;
+  height: 600px;
+  width: 90%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-left: 50px;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  height: 500px;
+  width: 300px;
+}
+
+.bar {
+  width: 90%;
+  margin-left: 50px;
+}
+
+.wrong {
+  box-shadow: 0 0 3px 5px red;
+}
+
+*:not(.wrong).bordered:hover {
+  box-shadow: 0 0 2px 5px #ffc60c;
+}
+
+h1 {
+  color: #000000;
+  font-size: 3rem;
+  text-align: center;
+  top: 0;
+}
+
+h1:hover {
+  color: #e7b100;
+}
+
+h2 {
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+}
+
+h2:hover {
+  color: #e7b100;
+}
+
+.winnie {
+  position: absolute;
+  top: 2%;
+  right: 15%;
+}
+
+.winnie img {
+  width: 85px !important;
+  height: 125px !important;
+}

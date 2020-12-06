@@ -1,208 +1,230 @@
 .background {
 
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.background::before {    
-      content: "";
-      background-image: url("src/assets/images/background.png");
-      background-size: cover;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      opacity: 0.50;
+.background::before {
+  content: "";
+  background-image: url("src/assets/images/background.png");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.50;
 }
 
 h1 {
-    position: absolute;
-  color: #000000;  
+  position: absolute;
+  color: #000000;
   font-size: 3rem;
   text-align: center;
-  top:0;
+  top: 0;
   right: 20%;
 }
-h1:hover{
 
-    color: #e7b100;
-    font-size: 50px;
-    right: 18%;
+h1:hover {
+
+  color: #e7b100;
+  font-size: 50px;
+  right: 18%;
 }
 
-h2
-{
-    position: absolute;
-    color: #000000;  
-    font-size: 30px;
-    text-align: center;
-    top:13%;
-    right: 23%;
+h2 {
+  position: absolute;
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+  top: 13%;
+  right: 23%;
 }
-h2:hover{
-    color: #e7b100;
-    font-size: 33px;
-    right: 20%;
+
+h2:hover {
+  color: #e7b100;
+  font-size: 33px;
+  right: 20%;
 }
-#apasa{
-    top:10%;
-    left: 20%;
+
+#apasa {
+  top: 10%;
+  left: 20%;
 }
-#cati{
-    top:16%;
-    left: 20%;
+
+#cati {
+  top: 16%;
+  left: 20%;
 }
+
 #ghiocei {
-    width: 500px;
-    height: 300px;
-}
-#ghioceidiv{
-    position: absolute;
-    
+  width: 500px;
+  height: 300px;
 }
 
-
-.winniediv{
-    position: absolute;
-    top:10%;
-    right: 10%;
-}
-.winnieSad{
-    position: absolute;
-    top:10%;
-    right: 10%;
-}
-.winnieHappy{
-    position: absolute;
-    top:10%;
-    right: 10%;
-
-}
-#wrong1gh{
-    position: absolute;
-    bottom: 0%;
-    left: 23%;
-}
-#wrong3gh{
-    position: absolute;
-    bottom: 0%;
-    right: 18%;
-}
-#bravo2gh{
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-}
-#wrong{
-    position: absolute;
-    top:50%;
-    left: 25%;
-}
-
-#wrong2{
-    position: absolute;
-    top:60%;
-    left: 45%;
-}
-#bravo{
-    position: absolute;
-    top:65%;
-    right:23%;
-}
-#check{
-    width:130px;
-    height: 200px;
-}
-
-#x{
-    width:140px;
-    height: 200px;
-}
-#number1{
-width: 150px;
-height: 170px;
-}
-#number2{
-    width: 150px;
-    height: 170px;
-}
-#number3{
-    width: 150px;
-    height: 170px;
-}
-
-
-#number1div{
-    position: absolute;
-    bottom: 5%;
-    left: 20%;
-}
-#number2div{
-    position: absolute;
-    bottom: 5%;
-    left: 45%;
-}
-#number3div{
-    position: absolute;
-    bottom: 5%;
-    right: 20%;
-}
-
-#winnie{
-    width: 175px;
-    height: 275px;
-    
-}
-
-.jar{
-    position: absolute;
-    top:40%;
-    left: 20%;
-}
-.jar:hover{
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px #ffc60c;
-}
-
-.jar1{
-    width: 150px;
-    height: 200px;
-}
-
-.jar2{
-    position: absolute;
-    top:30%;
-    left: 40%;
-
-}
-.jar2:hover{
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px #ffc60c;
-}
-.jar2img{
-    width: 200px;
-    height: 375px;
-}
-
-.jar3{
-    position: absolute;
-    top:25%;
-    right:25%;
-}
-.jar3:hover{
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px #ffc60c;
+#ghioceidiv {
+  position: absolute;
 
 }
 
-.jar3img{
-    width: 180px;
-    height: 450px;
+
+.winniediv {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+.winnieSad {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+.winnieHappy {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+
+}
+
+#wrong1gh {
+  position: absolute;
+  bottom: 0%;
+  left: 23%;
+}
+
+#wrong3gh {
+  position: absolute;
+  bottom: 0%;
+  right: 18%;
+}
+
+#bravo2gh {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+}
+
+#wrong {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+
+#wrong2 {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+}
+
+#bravo {
+  position: absolute;
+  top: 65%;
+  right: 23%;
+}
+
+#check {
+  width: 130px;
+  height: 200px;
+}
+
+#x {
+  width: 140px;
+  height: 200px;
+}
+
+#number1 {
+  width: 150px;
+  height: 170px;
+}
+
+#number2 {
+  width: 150px;
+  height: 170px;
+}
+
+#number3 {
+  width: 150px;
+  height: 170px;
+}
+
+
+#number1div {
+  position: absolute;
+  bottom: 5%;
+  left: 20%;
+}
+
+#number2div {
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
+}
+
+#number3div {
+  position: absolute;
+  bottom: 5%;
+  right: 20%;
+}
+
+#winnie {
+  width: 175px;
+  height: 275px;
+
+}
+
+.jar {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+.jar:hover {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #ffc60c;
+}
+
+.jar1 {
+  width: 150px;
+  height: 200px;
+}
+
+.jar2 {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+
+}
+
+.jar2:hover {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #ffc60c;
+}
+
+.jar2img {
+  width: 200px;
+  height: 375px;
+}
+
+.jar3 {
+  position: absolute;
+  top: 25%;
+  right: 25%;
+}
+
+.jar3:hover {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #ffc60c;
+
+}
+
+.jar3img {
+  width: 180px;
+  height: 450px;
 }

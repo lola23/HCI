@@ -1,20 +1,20 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {LimbaComponent} from './limba.component';
+import {DialogGresealaComponent} from './dialog-greseala.component';
 
-describe('LimbaComponent', () => {
-  let component: LimbaComponent;
-  let fixture: ComponentFixture<LimbaComponent>;
+describe('DialogGresealaComponent', () => {
+  let component: DialogGresealaComponent;
+  let fixture: ComponentFixture<DialogGresealaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LimbaComponent]
+      declarations: [DialogGresealaComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LimbaComponent);
+    fixture = TestBed.createComponent(DialogGresealaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,15 +1,28 @@
-<div class="container">
-  <div class="cerinta">
-    <h1>Da click pe un vestitor al primaverii</h1>
-  </div>
-  <div class="gallery">
-    <img (click)="handleClick(1)" [src]=image1 class="bordered" alt="Image 1">
-    <img (click)="handleClick(2)" [src]=image2 class="bordered" alt="Image 2">
-    <img (click)="handleClick(3)" [src]=image3 class="bordered" alt="Image 3">
-  </div>
-  <div class="bar">
-    <mat-progress-bar mode="determinate" [value]=progress></mat-progress-bar>
+<div class="container-all">
+  <div class="bg"></div>
+  <div class="container">
+    <div class="cerinta">
+      <h1 (mouseenter)="playModul()">Ajuta-l pe Winnie sa descopere vestitorii primaverii</h1>
+      <h2 (mouseover)="playCerinta()">Da click pe imaginea in care regasesti un vestitor al primaverii</h2>
+      <div class="winnie">
+        <img alt="winnie" src="assets/images/Rectangle 19.png">
+      </div>
+    </div>
+    <div class="gallery">
+      <img (click)="handleClick(1)"
+           [ngClass]="{'wrong': wrong1 }" [src]=image1 alt="Image 1"
+           class="bordered">
+      <img (click)="handleClick(2)"
+           [ngClass]="{'wrong': wrong2 }" [src]=image2 alt="Image 2"
+           class="bordered">
+      <img (click)="handleClick(3)"
+           [ngClass]="{'wrong': wrong3 }" [src]=image3 alt="Image 3"
+           class="bordered">
+    </div>
+    <div class="bar">
+      <mat-progress-bar [value]=progress mode="determinate"></mat-progress-bar>
+    </div>
   </div>
 </div>
-<router-outlet></router-outlet>
+
 

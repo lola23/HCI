@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -8,11 +8,12 @@ import {Router} from '@angular/router';
 })
 export class VideoComponent {
 
+  @ViewChild('videoPlayer', {static: false}) videoplayer: ElementRef;
+
   constructor(
     private readonly router: Router,
-  ) { }
-
-  @ViewChild('videoPlayer', { static: false }) videoplayer: ElementRef;
+  ) {
+  }
 
   toggleVideo(): void {
     this.videoplayer.nativeElement.play();

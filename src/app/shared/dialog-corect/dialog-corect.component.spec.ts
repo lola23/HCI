@@ -1,20 +1,20 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {LimbaComponent} from './limba.component';
+import {DialogCorectComponent} from './dialog-corect.component';
 
-describe('LimbaComponent', () => {
-  let component: LimbaComponent;
-  let fixture: ComponentFixture<LimbaComponent>;
+describe('DialogCorectComponent', () => {
+  let component: DialogCorectComponent;
+  let fixture: ComponentFixture<DialogCorectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LimbaComponent]
+      declarations: [DialogCorectComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LimbaComponent);
+    fixture = TestBed.createComponent(DialogCorectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

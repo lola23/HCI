@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { FormaGeometricaComponent } from './forma-geometrica.component';
+import {FormaGeometricaComponent} from './forma-geometrica.component';
 
 describe('FormaGeometricaComponent', () => {
   let component: FormaGeometricaComponent;
@@ -8,9 +8,9 @@ describe('FormaGeometricaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormaGeometricaComponent ]
+      declarations: [FormaGeometricaComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { MediuComponent } from './mediu.component';
+import {MediuComponent} from './mediu.component';
 
 describe('MediuComponent', () => {
   let component: MediuComponent;
@@ -8,9 +8,9 @@ describe('MediuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MediuComponent ]
+      declarations: [MediuComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
