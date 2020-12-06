@@ -5,6 +5,7 @@ import {HomeComponent} from './modules/home/home.component';
 
 import {NumaratoareComponent} from './modules/numaratoare/numaratoare.component';
 import {VestitorulComponent} from './modules/vestitorul/vestitorul.component';
+import { FormaGeometricaComponent } from './modules/forma-geometrica/forma-geometrica.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,9 @@ const routes: Routes = [
   {
     path: 'vestitorul/:id',
     component: VestitorulComponent
+  },{
+    path: 'forme/:id', 
+    component: FormaGeometricaComponent
   }
 ];
 

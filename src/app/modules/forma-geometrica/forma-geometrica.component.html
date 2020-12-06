@@ -1,1 +1,25 @@
-<p>forma-geometrica works!</p>
+<div class="background">
+    <h1 (mouseover)='over()' (mouseout)='out()' >Apasa pe imaginea cu forma de {{forma}}</h1>
+
+    <div id="how_to" >
+        <img  [src]=path alt="winnie" id="how_to_img">
+    </div>
+
+
+    <div class="winnieHappy"  id="happy">
+        <img  src="assets/images/forme/winnie_waiting.png" alt="winnie" id="winnie">
+    </div>
+   
+    <div class="circleDiv" (click)='check(1)' >
+        <img src="assets/images/forme/circle_1.png" id ="choice1" alt="jar" class="img">
+    </div>
+
+    <div class="squareDiv" (click)='check(2)' >
+        <img src="assets/images/forme/square_1.png"  id ="choice2" alt="winnie" class="img">
+    </div>
+
+    <div class="triangleDiv" (click)='check(3)'  >
+        <img src="assets/images/forme/triangle_1.png" id ="choice3"  alt="winnie" class="img">
+    </div>
+<router-outlet></router-outlet>
+
