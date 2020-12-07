@@ -204,12 +204,14 @@ export class NumaratoareComponent implements OnInit {
           //     return false;
           // }
           // this.router.onSameUrlNavigation = 'reload';
+          this.level=this.level+1;
           this.ngZone.run(()=>this.router.navigate(['/numaratore', 3]));
+          
           
             
             
           } else {
-            
+             this.router.navigate(['/forme',1]);
           }
       },
       4000);
@@ -269,6 +271,7 @@ export class NumaratoareComponent implements OnInit {
       document.getElementById('bravo').hidden = false;
       this.stopAllSounds();
       this.soundBravo.play();
+
       
  
       setTimeout(() =>
@@ -278,13 +281,14 @@ export class NumaratoareComponent implements OnInit {
           //     return false;
           // }
           // this.router.onSameUrlNavigation = 'reload';
+          this.level=this.level+1;
           this.ngZone.run(()=>this.router.navigate(['/numaratore', 2]));
           
             // this.level=this.level+1;
             // this.ngOnInit();
             
           } else {
-            
+             this.router.navigate(['/forme',1]);
           }
       },
       3700);
@@ -293,6 +297,7 @@ export class NumaratoareComponent implements OnInit {
 
 
     }
+
 
   }
 
