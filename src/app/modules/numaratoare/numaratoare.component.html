@@ -1,72 +1,73 @@
 <div class="background">
-    <!-- <audio #audioOption>
-        <source src='assets/Recording (2).m4a' type="audio/m4a">
-    </audio> -->
-    <h1 (mouseover)='over()' (mouseout)='out()' *ngIf="id1">Winnie vrea sa manance 3 borcane de miere</h1>
-    <h2 (mouseover)='over()' (mouseout)='out()' *ngIf="id1">Apasa pe turnul care are 3 borcane de miere si ajuta-l pe Winnie</h2>
-    <h1 (mouseover)='over()' (mouseout)='out()' *ngIf="id2" id="ajuta">Ajuta-l pe Winnie sa isi gaseasca ghioceii</h1>
-    <h2 (mouseover)='over()' (mouseout)='out()' *ngIf="id2" id="apasa">Apasa cu mouse-ul pe numarul corect</h2>
-    <h2 (mouseover)='over()' (mouseout)='out()' *ngIf="id2" id="cati">Cati ghiocei poti numara?</h2>
-    <div class="winniediv" id="winnied">
-        <img *ngIf="id1" src="assets/images/Rectangle 19.png" alt="winnie" id="winnie">
-        <img *ngIf="id2" src="assets/images/poohflower.gif" alt="winnie" id="winnie">
-    </div>
-    <div class="winnieSad" id="sad" >
-        <img  src="assets/images/happyWinnie.png" alt="winnie" id="winnie">
+  <!-- <audio #audioOption>
+      <source src='assets/Recording (2).m4a' type="audio/m4a">
+  </audio> -->
+  <h1 (mouseout)='out()' (mouseover)='over()' id="l1h1">Winnie vrea sa manance 3 borcane de miere</h1>
+  <h2 (mouseout)='out()' (mouseover)='over()' id="l1h2">Apasa pe turnul care are 3 borcane de miere si ajuta-l pe
+    Winnie</h2>
+  <h1 (mouseout)='out()' (mouseover)='over()'  id="ajuta">Ajuta-l pe Winnie {{obiect}}</h1>
+  <h2 (mouseout)='out()' (mouseover)='over()'  id="apasa">Apasa cu mouse-ul pe numarul corect</h2>
+  <h2 (mouseout)='out()' (mouseover)='over()'  id="cati">{{obiectCat}} poti numara?</h2>
+  <div class="winniediv" id="winnied">
+    <img  alt="winnie" id="winnie" src="assets/images/Rectangle 19.png">
+    <!-- <img  alt="winnie" id="winnie" src="assets/images/poohflower.gif"> -->
+  </div>
+  <div class="winnieSad" id="sad">
+    <img alt="winnie" id="winnie" src="assets/images/happyWinnie.png">
 
-    </div>
-    <div class="winnieHappy"  id="happy">
-        <img  src="assets/images/thinking.gif" alt="winnie" id="winnie">
-    </div>
+  </div>
+  <div class="winnieHappy" id="happy">
+    <img alt="winnie" id="winnie" src="assets/images/thinking.gif">
+  </div>
 
-    <!-- <ng-container *ngIf="id1"> -->
-   
-    <div class="jar" (click)='jar(1)' *ngIf="id1">
-        <img src="assets/images/honeyjar 1.png" alt="jar" class="jar1">
-    </div>
-    <div id="wrong" >
-        <img  src="assets/images/x.png" alt="x" id="x">
-    </div>
-    <div class="jar2" (click)='jar(2)' *ngIf="id1">
-        <img src="assets/images/Group 4.png" alt="jar2" class="jar2img">
-    </div>
-    <div id="wrong2">
-        <img  src="assets/images/x.png" alt="x" id="x">
-    </div>
-    <div class="jar3" (click)='jar(3)'  *ngIf="id1">
-        <img src="assets/images/Group 5.png" alt="jar3" class="jar3img">
-    </div>
-    <div id="bravo">
-        <img  src="assets/images/check.png" alt="check" id="check">
-    </div>
-    <!-- </ng-container> -->
-    <!-- <ng-container *ngIf="id2"> -->
-<div id="ghioceidiv" *ngIf="id2">
-        <img src="assets/images/ghiocei.jpg" alt="ghiocei" id="ghiocei">
-</div>
-        <div id="number1div" (click)='ghiocei(1)' *ngIf="id2">
-            <img src="assets/images/Group 1.png" alt="1" id="number1">
+  <!-- <ng-container *ngIf="id1"> -->
 
-        </div>
-        <div id="wrong1gh">
-            <img  src="assets/images/x.png" alt="x" id="x">
-        </div>
-        <div id="number2div" (click)='ghiocei(2)' *ngIf="id2">
-            <img src="assets/images/Group 2.png" alt="2" id="number2">
-        </div>
-        
-        <div id="bravo2gh">
-            <img  src="assets/images/check.png" alt="check" id="check">
-        </div>
+  <div (click)='jar(1)' id="jar1" class="jar">
+    <img alt="jar" class="jar1" src="assets/images/honeyjar 1.png">
+  </div>
+  <div id="wrong">
+    <img alt="x" id="x" src="assets/images/x.png">
+  </div>
+  <div (click)='jar(2)' id="jar2" class="jar2">
+    <img alt="jar2" class="jar2img" src="assets/images/Group 4.png">
+  </div>
+  <div id="wrong2">
+    <img alt="x" id="x" src="assets/images/x.png">
+  </div>
+  <div (click)='jar(3)' id="jar3" class="jar3">
+    <img alt="jar3" class="jar3img" src="assets/images/Group 5.png">
+  </div>
+  <div id="bravo">
+    <img alt="check" id="check" src="assets/images/check.png">
+  </div>
+  <!-- </ng-container> -->
+  <!-- <ng-container *ngIf="id2"> -->
+  <div id="ghioceidiv">
+    <img alt="ghiocei" id="ghiocei" [src]=path>
+  </div>
+  <div (click)='ghiocei(1)' id="number1div">
+    <img alt="1" id="number1" src="assets/images/Group 1.png">
 
-        <div id="number3div" (click)='ghiocei(3)' *ngIf="id2">
-            <img src="assets/images/Group 3.png" alt="3" id="number3">
+  </div>
+  <div id="wrong1gh">
+    <img alt="x" id="x" src="assets/images/x.png">
+  </div>
+  <div (click)='ghiocei(2)' id="number2div">
+    <img alt="2" id="number2" src="assets/images/Group 2.png">
+  </div>
 
-        </div>
-        <div id="wrong3gh" >
-            <img  src="assets/images/x.png" alt="x" id="x">
-        </div>
-    <!-- </ng-container> -->
+  <div id="bravo2gh">
+    <img alt="check" id="check" src="assets/images/check.png">
+  </div>
+
+  <div (click)='ghiocei(3)' id="number3div">
+    <img alt="3" id="number3" src="assets/images/Group 3.png">
+
+  </div>
+  <div id="wrong3gh">
+    <img alt="x" id="x" src="assets/images/x.png">
+  </div>
+  <!-- </ng-container> -->
 </div>
 <router-outlet></router-outlet>
 
