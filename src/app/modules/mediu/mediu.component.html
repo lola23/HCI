@@ -1,16 +1,10 @@
 <div class="game">
   <h1 (mouseover)='over()' (mouseout)='out()'>Winnie vrea sa protejeze mediul, insa nu stie ce e bine sa faca si ce
     nu.</h1>
-  <h2 (mouseover)='over()' (mouseout)='out()'>Ajuta-l pe Winnie sa aleaga varianta corecta.</h2>
-  <div class="gallery">
-    <img (click)="handleClick(1)" [src]=image1 class="bordered" alt="Image 1">
-    <div id="wrong-feedback">
-      <img class="x-image" src="assets/images/x.png" alt="x">
-    </div>
-    <img (click)="handleClick(2)" [src]=image2 class="bordered" alt="Image 2">
-    <div id="good-feedback">
-      <img src="assets/images/check.png" alt="check" id="check">
-      /div>
-    </div>
+<!--  <h2 (mouseover)='over()' (mouseout)='out()'>Ajuta-l pe Winnie sa aleaga varianta corecta.</h2>-->
+  <div class="gallery-mediu">
+    <img (click)="handleClick(1)" [src]=correctImage class="bordered" alt="Image 1">
+    <img (click)="handleClick(2)" [src]=wrongImage class="bordered" alt="Image 2">
   </div>
+  <img id="winnie-thinking" src="assets/images/mediu/winnie-loop.gif" class="bordered" alt="winnie">
 </div>

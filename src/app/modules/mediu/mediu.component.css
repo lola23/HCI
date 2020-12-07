@@ -1,9 +1,23 @@
+.gallery-mediu {
+  height: 400px;
+  width: 90%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-left: 150px;
+  position: relative;
+}
+
+.gallery-mediu img {
+  width: 70%;
+}
+
 .game {
   height: 100vh;
   width: 100%;
   align-items: center;
   justify-content: center;
-  background-image: url("src/assets/images/background.png");
+  background-image: url("src/assets/images/mediu/background.png");
   background-size: cover;
   position: absolute;
 }
@@ -14,7 +28,6 @@ h1 {
 
 h1:hover {
   color: #e7b100;
-  font-size: 50px;
 }
 
 h2 {
@@ -25,22 +38,18 @@ h2 {
 
 h2:hover {
   color: #e7b100;
-  font-size: 33px;
 }
 
-#wrong-feedback {
-  position: absolute;
-  /*top:50%;*/
-  /*left: 25%;*/
+.gallery-mediu img:hover {
+  box-shadow: 0 0 3px 5px yellow;
+  background-color: white;
 }
 
-#good-feedback {
-  position: absolute;
-  /*top:30%;*/
-  /*left: 80%;*/
+#winnie-thinking {
+  width: 20%;
+  height: 35%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.x-image {
-  width: 300px;
-  height: 300px;
-}

@@ -137,8 +137,8 @@ export class FormaGeometricaComponent implements OnInit {
             setTimeout(() => {
               (document.getElementById('winnie') as HTMLImageElement).src = "assets/images/forme/winnie_waiting.png";
 
-            }, 2200)
-
+            }, 2200);
+            this.router.navigate(['/mediu', 1]);
           }
         }
       }
