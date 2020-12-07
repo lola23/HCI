@@ -6,6 +6,7 @@ import {HomeComponent} from './modules/home/home.component';
 import {NumaratoareComponent} from './modules/numaratoare/numaratoare.component';
 import {VestitorulComponent} from './modules/vestitorul/vestitorul.component';
 import { FormaGeometricaComponent } from './modules/forma-geometrica/forma-geometrica.component';
+import {MediuComponent} from './modules/mediu/mediu.component';
 
 
 const routes: Routes = [
@@ -29,10 +30,14 @@ const routes: Routes = [
   {
     path: 'vestitorul/:id',
     component: VestitorulComponent
-  },{
-    path: 'forme/:id', 
+  },
+  {
+    path: 'forme/:id',
     component: FormaGeometricaComponent
-  }
+  },
+  { path: 'mediu/:id',
+    component: MediuComponent
+  },
 ];
 
 @NgModule({

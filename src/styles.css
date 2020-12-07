@@ -15,6 +15,26 @@ body, html {
   min-height: 100%;
 }
 
+.gallery {
+  height: 600px;
+  width: 90%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-left: 50px;
+  position: relative;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 img {
   height: 400px;
   width: 200px;
