@@ -1,6 +1,5 @@
 import { Component, destroyPlatform, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-forma-geometrica',
@@ -69,6 +68,8 @@ export class FormaGeometricaComponent implements OnInit {
         document.getElementById("how_to").hidden = true;
   }
 
+  over(){}
+  out(){}
   setImagesForLevel1() {
     (document.getElementById('choice1') as HTMLImageElement).src = "assets/images/forme/circle_1.png";
     (document.getElementById('choice2') as HTMLImageElement).src = "assets/images/forme/square_1.png";
