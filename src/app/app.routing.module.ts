@@ -7,6 +7,7 @@ import {NumaratoareComponent} from './modules/numaratoare/numaratoare.component'
 import {VestitorulComponent} from './modules/vestitorul/vestitorul.component';
 import { FormaGeometricaComponent } from './modules/forma-geometrica/forma-geometrica.component';
 import {MediuComponent} from './modules/mediu/mediu.component';
+import {LimbaComponent} from './modules/limba/limba.component'
 
 
 const routes: Routes = [
@@ -38,6 +39,9 @@ const routes: Routes = [
   { path: 'mediu/:id',
     component: MediuComponent
   },
+  { path: 'limba/:id',
+    component: LimbaComponent
+  }
 ];
 
 @NgModule({
