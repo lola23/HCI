@@ -12,52 +12,43 @@
   background-image: url("src/assets/images/background.png");
   background-size: cover;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   opacity: 0.50;
 }
 
 h1 {
   position: absolute;
   color: #000000;
-  font-size: 3rem;
   text-align: center;
   top: 0;
-  right: 20%;
 }
 
 h1:hover {
-
   color: #e7b100;
-  font-size: 50px;
-  right: 18%;
 }
 
 h2 {
   position: absolute;
   color: #000000;
-  font-size: 30px;
   text-align: center;
-  top: 13%;
-  right: 23%;
+  top: 5%;
 }
 
 h2:hover {
   color: #e7b100;
-  font-size: 33px;
-  right: 20%;
 }
 
 #apasa {
   top: 10%;
-  left: 20%;
+  text-align: center;
 }
 
 #cati {
   top: 16%;
-  left: 20%;
+  text-align: center;
 }
 
 #ghiocei {
@@ -69,7 +60,6 @@ h2:hover {
   position: absolute;
 
 }
-
 
 .winniediv {
   position: absolute;
@@ -92,37 +82,37 @@ h2:hover {
 
 #wrong1gh {
   position: absolute;
-  bottom: 0%;
+  bottom: 0;
   left: 23%;
 }
 
 #wrong3gh {
   position: absolute;
-  bottom: 0%;
+  bottom: 0;
   right: 18%;
 }
 
 #bravo2gh {
   position: absolute;
-  bottom: 0%;
+  bottom: 0;
   left: 50%;
 }
 
 #wrong {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 25%;
 }
 
 #wrong2 {
   position: absolute;
-  top: 60%;
+  top: 45%;
   left: 45%;
 }
 
 #bravo {
   position: absolute;
-  top: 65%;
+  top: 50%;
   right: 23%;
 }
 
@@ -151,33 +141,32 @@ h2:hover {
   height: 170px;
 }
 
-
 #number1div {
   position: absolute;
-  bottom: 5%;
+  bottom: 35px;
   left: 20%;
 }
 
 #number2div {
   position: absolute;
-  bottom: 5%;
+  bottom: 35px;
   left: 45%;
 }
 
 #number3div {
   position: absolute;
-  bottom: 5%;
+  bottom: 35px;
   right: 20%;
 }
 
-#winnie{
-    width: 175px;
-    height: 275px;
+#winnie {
+  width: 175px;
+  height: 275px;
 }
 
 .jar {
   position: absolute;
-  top: 40%;
+  top: 25%;
   left: 20%;
 }
 
@@ -194,7 +183,7 @@ h2:hover {
 
 .jar2 {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 40%;
 
 }
@@ -212,7 +201,7 @@ h2:hover {
 
 .jar3 {
   position: absolute;
-  top: 25%;
+  top: 15%;
   right: 25%;
 }
 
@@ -226,4 +215,11 @@ h2:hover {
 .jar3img {
   width: 180px;
   height: 450px;
+}
+
+.bar {
+  position: absolute;
+  width: 90%;
+  margin-left: 50px;
+  bottom: 50px;
 }

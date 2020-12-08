@@ -1,10 +1,13 @@
 <div class="game">
-  <h1 (mouseover)='over()' (mouseout)='out()'>Winnie vrea sa protejeze mediul, insa nu stie ce e bine sa faca si ce
+  <h1 (mouseout)='out()' (mouseover)='over()'>Winnie vrea sa protejeze mediul, insa nu stie ce e bine sa faca si ce
     nu.</h1>
-<!--  <h2 (mouseover)='over()' (mouseout)='out()'>Ajuta-l pe Winnie sa aleaga varianta corecta.</h2>-->
+  <!--  <h2 (mouseover)='over()' (mouseout)='out()'>Ajuta-l pe Winnie sa aleaga varianta corecta.</h2>-->
   <div class="gallery-mediu">
-    <img (click)="handleClick(1)" [src]=correctImage class="bordered" alt="Image 1">
-    <img (click)="handleClick(2)" [src]=wrongImage class="bordered" alt="Image 2">
+    <img (click)="handleClick(1)" [src]=correctImage alt="Image 1" class="bordered">
+    <img (click)="handleClick(2)" [src]=wrongImage alt="Image 2" class="bordered">
   </div>
-  <img id="winnie-thinking" src="assets/images/mediu/winnie-loop.gif" class="bordered" alt="winnie">
+  <img alt="winnie" class="bordered" id="winnie-thinking" src="assets/images/mediu/winnie-loop.gif">
+  <div class="bar">
+    <mat-progress-bar [value]=progress mode="determinate"></mat-progress-bar>
+  </div>
 </div>

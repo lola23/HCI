@@ -11,6 +11,7 @@ import {Howl} from 'howler';
 export class NumaratoareComponent implements OnInit {
 
   level;
+  progress = 21;
   obiect;
   obiectCat;
   path;
@@ -47,37 +48,34 @@ export class NumaratoareComponent implements OnInit {
 
   });
 
-
-  private sub: any;
-
-  constructor(   private readonly route: ActivatedRoute,
-    private readonly router: Router,private ngZone:NgZone,) {
-    
+  constructor(private readonly route: ActivatedRoute,
+              private readonly router: Router, private ngZone: NgZone
+  ) {
   }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-    
+
       this.level = parseInt(params.id, 10);
-     
+
       // this.resetWrongs();
       switch (this.level) {
         case 1: {
           this.loadLevel1();
           this.sound.play();
-          
+
           break;
         }
         case 2: {
           this.loadLevel2();
           this.soundGhiocei.play();
-          
-         
+
+
           break;
         }
         case 3: {
           this.loadLevel3();
-         
+
           break;
         }
       }
@@ -104,68 +102,73 @@ export class NumaratoareComponent implements OnInit {
     document.getElementById('happy').hidden = true;
 
   }
-  loadLevel3() {
+
+  loadLevel3(): void {
     document.getElementById('winnied').hidden = false;
     document.getElementById('l1h1').hidden = true;
-          document.getElementById('l1h2').hidden = true;
-          document.getElementById('jar1').hidden = true;
-          document.getElementById('jar2').hidden = true;
-          document.getElementById('jar3').hidden = true;
-          document.getElementById('wrong').hidden = true;
-          document.getElementById('wrong2').hidden = true;
-          document.getElementById('bravo').hidden = true;
-      
-          document.getElementById('wrong1gh').hidden = true;
-          document.getElementById('wrong3gh').hidden = true;
-          document.getElementById('bravo2gh').hidden = true;
-          document.getElementById('sad').hidden = true;
-          document.getElementById('happy').hidden = true;
+    document.getElementById('l1h2').hidden = true;
+    document.getElementById('jar1').hidden = true;
+    document.getElementById('jar2').hidden = true;
+    document.getElementById('jar3').hidden = true;
+    document.getElementById('wrong').hidden = true;
+    document.getElementById('wrong2').hidden = true;
+    document.getElementById('bravo').hidden = true;
+
+    document.getElementById('wrong1gh').hidden = true;
+    document.getElementById('wrong3gh').hidden = true;
+    document.getElementById('bravo2gh').hidden = true;
+    document.getElementById('sad').hidden = true;
+    document.getElementById('happy').hidden = true;
     document.getElementById('ajuta').hidden = false;
-          document.getElementById('apasa').hidden = false;
-          document.getElementById('cati').hidden = false;
-          document.getElementById('ghioceidiv').hidden = false;
-          document.getElementById('number1div').hidden = false;
-          document.getElementById('number2div').hidden = false;
-          document.getElementById('number3div').hidden = false;
-    this.path="assets/images/berze1.jpg";
-    this.obiect="sa gaseasca toate berzele";
-    this.obiectCat="Cate berze";
+    document.getElementById('apasa').hidden = false;
+    document.getElementById('cati').hidden = false;
+    document.getElementById('ghioceidiv').hidden = false;
+    document.getElementById('number1div').hidden = false;
+    document.getElementById('number2div').hidden = false;
+    document.getElementById('number3div').hidden = false;
+    this.path = 'assets/images/berze1.jpg';
+    this.obiect = 'sa gaseasca toate berzele';
+    this.obiectCat = 'Cate berze';
+    this.progress = 35;
   }
-  loadLevel2() {
+
+  loadLevel2(): void {
     document.getElementById('winnied').hidden = false;
     document.getElementById('l1h1').hidden = true;
-          document.getElementById('l1h2').hidden = true;
-          document.getElementById('jar1').hidden = true;
-          document.getElementById('jar2').hidden = true;
-          document.getElementById('jar3').hidden = true;
-          document.getElementById('wrong').hidden = true;
-          document.getElementById('wrong2').hidden = true;
-          document.getElementById('bravo').hidden = true;
-      
-          document.getElementById('wrong1gh').hidden = true;
-          document.getElementById('wrong3gh').hidden = true;
-          document.getElementById('bravo2gh').hidden = true;
-          document.getElementById('sad').hidden = true;
-          document.getElementById('happy').hidden = true;
+    document.getElementById('l1h2').hidden = true;
+    document.getElementById('jar1').hidden = true;
+    document.getElementById('jar2').hidden = true;
+    document.getElementById('jar3').hidden = true;
+    document.getElementById('wrong').hidden = true;
+    document.getElementById('wrong2').hidden = true;
+    document.getElementById('bravo').hidden = true;
+
+    document.getElementById('wrong1gh').hidden = true;
+    document.getElementById('wrong3gh').hidden = true;
+    document.getElementById('bravo2gh').hidden = true;
+    document.getElementById('sad').hidden = true;
+    document.getElementById('happy').hidden = true;
     document.getElementById('ajuta').hidden = false;
-          document.getElementById('apasa').hidden = false;
-          document.getElementById('cati').hidden = false;
-          document.getElementById('ghioceidiv').hidden = false;
-          document.getElementById('number1div').hidden = false;
-          document.getElementById('number2div').hidden = false;
-          document.getElementById('number3div').hidden = false;
-    this.path="assets/images/ghiocei.jpg";
-    this.obiect="sa isi gaseasca ghioceii";
-    this.obiectCat="Cati ghiocei";
+    document.getElementById('apasa').hidden = false;
+    document.getElementById('cati').hidden = false;
+    document.getElementById('ghioceidiv').hidden = false;
+    document.getElementById('number1div').hidden = false;
+    document.getElementById('number2div').hidden = false;
+    document.getElementById('number3div').hidden = false;
+    this.path = 'assets/images/ghiocei.jpg';
+    this.obiect = 'sa isi gaseasca ghioceii';
+    this.obiectCat = 'Cati ghiocei';
+    this.progress = 28;
   }
-  loadLevel1() {
+
+  loadLevel1(): void {
     document.getElementById('ajuta').hidden = true;
-          document.getElementById('apasa').hidden = true;
-          document.getElementById('cati').hidden = true;
-          document.getElementById('ghioceidiv').hidden = true;
-          document.getElementById('number1div').hidden = true;
-          document.getElementById('number2div').hidden = true;
-          document.getElementById('number3div').hidden = true;
+    document.getElementById('apasa').hidden = true;
+    document.getElementById('cati').hidden = true;
+    document.getElementById('ghioceidiv').hidden = true;
+    document.getElementById('number1div').hidden = true;
+    document.getElementById('number2div').hidden = true;
+    document.getElementById('number3div').hidden = true;
   }
 
   // playAudio(){
@@ -176,7 +179,7 @@ export class NumaratoareComponent implements OnInit {
   // }
 
   ghiocei(nr): void {
-    
+
     if (nr === 1) {
       document.getElementById('winnied').hidden = true;
       document.getElementById('happy').hidden = false;
@@ -186,7 +189,7 @@ export class NumaratoareComponent implements OnInit {
       document.getElementById('bravo2gh').hidden = true;
       this.stopAllSounds();
       this.soundIncerca.play();
-      
+
     } else if (nr === 2) {
 
       document.getElementById('winnied').hidden = true;
@@ -197,24 +200,21 @@ export class NumaratoareComponent implements OnInit {
       document.getElementById('bravo2gh').hidden = false;
       this.stopAllSounds();
       this.soundBravo.play();
-      setTimeout(() =>
-      {
-        if (this.level < 3) {
-          //   this.router.routeReuseStrategy.shouldReuseRoute = function () {
-          //     return false;
-          // }
-          // this.router.onSameUrlNavigation = 'reload';
-          this.level=this.level+1;
-          this.ngZone.run(()=>this.router.navigate(['/numaratore', 3]));
-          
-          
-            
-            
+      setTimeout(() => {
+          if (this.level < 3) {
+            //   this.router.routeReuseStrategy.shouldReuseRoute = function () {
+            //     return false;
+            // }
+            // this.router.onSameUrlNavigation = 'reload';
+            this.level = this.level + 1;
+            this.ngZone.run(() => this.router.navigate(['/numaratore', 3]));
+
+
           } else {
-             this.router.navigate(['/forme',1]);
+            this.router.navigate(['/forme', 1]);
           }
-      },
-      4000);
+        },
+        4000);
 
     } else if (nr === 3) {
 
@@ -227,15 +227,15 @@ export class NumaratoareComponent implements OnInit {
       this.stopAllSounds();
       this.soundIncerca.play();
     }
-  
 
 
   }
-  stopAllSounds(){
+
+  stopAllSounds(): void {
     this.sound.stop();
     this.soundBravo.stop();
-  this.soundGhiocei.stop();
-  this.soundIncerca.stop();
+    this.soundGhiocei.stop();
+    this.soundIncerca.stop();
   }
 
   jar(a): void {
@@ -272,28 +272,24 @@ export class NumaratoareComponent implements OnInit {
       this.stopAllSounds();
       this.soundBravo.play();
 
-      
- 
-      setTimeout(() =>
-      {
-        if (this.level < 3) {
-          //   this.router.routeReuseStrategy.shouldReuseRoute = function () {
-          //     return false;
-          // }
-          // this.router.onSameUrlNavigation = 'reload';
-          this.level=this.level+1;
-          this.ngZone.run(()=>this.router.navigate(['/numaratore', 2]));
-          
+
+      setTimeout(() => {
+          if (this.level < 3) {
+            //   this.router.routeReuseStrategy.shouldReuseRoute = function () {
+            //     return false;
+            // }
+            // this.router.onSameUrlNavigation = 'reload';
+            this.level = this.level + 1;
+            this.ngZone.run(() => this.router.navigate(['/numaratore', 2]));
+
             // this.level=this.level+1;
             // this.ngOnInit();
-            
-          } else {
-             this.router.navigate(['/forme',1]);
-          }
-      },
-      3700);
 
- 
+          } else {
+            this.router.navigate(['/forme', 1]);
+          }
+        },
+        3700);
 
 
     }
@@ -302,18 +298,18 @@ export class NumaratoareComponent implements OnInit {
   }
 
   over(): void {
-    if (this.level===1) {
+    if (this.level === 1) {
 
       this.sound.play();
-    } else if (this.level===2) {
+    } else if (this.level === 2) {
       this.soundGhiocei.play();
     }
   }
 
   out(): void {
-    if (this.level===1) {
+    if (this.level === 1) {
       this.sound.stop();
-    } else if (this.level===2) {
+    } else if (this.level === 2) {
       this.soundGhiocei.stop();
     }
   }

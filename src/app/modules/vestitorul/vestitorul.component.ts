@@ -110,7 +110,7 @@ export class VestitorulComponent implements OnInit {
     this.image2 = 'assets/images/vestitorii/caine.png';
     this.image3 = 'assets/images/vestitorii/soare.png';
     this.answer = 3;
-    this.progress = 6;
+    this.progress = 7;
   }
 
   loadLevel3(): void {
@@ -118,7 +118,7 @@ export class VestitorulComponent implements OnInit {
     this.image2 = 'assets/images/vestitorii/ghiocel.png';
     this.image3 = 'assets/images/vestitorii/avion.png';
     this.answer = 2;
-    this.progress = 12;
+    this.progress = 14;
   }
 
   resetWrongs(): void {

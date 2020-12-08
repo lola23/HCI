@@ -5,9 +5,9 @@ import {HomeComponent} from './modules/home/home.component';
 
 import {NumaratoareComponent} from './modules/numaratoare/numaratoare.component';
 import {VestitorulComponent} from './modules/vestitorul/vestitorul.component';
-import { FormaGeometricaComponent } from './modules/forma-geometrica/forma-geometrica.component';
+import {FormaGeometricaComponent} from './modules/forma-geometrica/forma-geometrica.component';
 import {MediuComponent} from './modules/mediu/mediu.component';
-import {LimbaComponent} from './modules/limba/limba.component'
+import {LimbaComponent} from './modules/limba/limba.component';
 
 
 const routes: Routes = [
@@ -36,10 +36,12 @@ const routes: Routes = [
     path: 'forme/:id',
     component: FormaGeometricaComponent
   },
-  { path: 'mediu/:id',
+  {
+    path: 'mediu/:id',
     component: MediuComponent
   },
-  { path: 'limba/:id',
+  {
+    path: 'limba/:id',
     component: LimbaComponent
   }
 ];

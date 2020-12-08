@@ -46,8 +46,10 @@ img {
 }
 
 .bar {
+  position: absolute;
   width: 90%;
   margin-left: 50px;
+  bottom: 50px;
 }
 
 .wrong {

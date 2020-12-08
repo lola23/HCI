@@ -13,6 +13,7 @@ export class MediuComponent implements OnInit {
   answer;
   correctImage;
   wrongImage;
+  progress = 63;
   sound = new Howl({
     src: ['assets/audio/winnie-mediu.mp4'],
     volume: 1,
@@ -22,9 +23,9 @@ export class MediuComponent implements OnInit {
     volume: 1,
   });
   congratsSound = new Howl({
-      src: ['assets/audio/bravo.mp3'],
-      volume: 1
-    });
+    src: ['assets/audio/bravo.mp3'],
+    volume: 1
+  });
 
   constructor(private router: Router, private route: ActivatedRoute) {
   }
@@ -37,20 +38,17 @@ export class MediuComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.level = parseInt(params.id, 10);
       switch (this.level) {
-        case 1:
-        {
+        case 1: {
           this.loadLevel1();
           console.log(this.level);
           break;
         }
-        case 2:
-        {
+        case 2: {
           this.loadLevel2();
           console.log(this.level);
           break;
         }
-        case 3:
-        {
+        case 3: {
           this.loadLevel3();
           console.log(this.level);
           break;
@@ -71,6 +69,7 @@ export class MediuComponent implements OnInit {
     this.answer = 2;
     this.correctImage = 'assets/images/mediu/litter.png';
     this.wrongImage = 'assets/images/mediu/litter-good.png';
+    this.progress = 70;
   }
 
   loadLevel3(): void {
@@ -78,6 +77,7 @@ export class MediuComponent implements OnInit {
     this.answer = 2;
     this.correctImage = 'assets/images/mediu/winnie-flowers-bad.png';
     this.wrongImage = 'assets/images/mediu/winnie-flowers-good.png';
+    this.progress = 77;
   }
 
   handleClick(index: number): void {
@@ -87,14 +87,12 @@ export class MediuComponent implements OnInit {
         (document.getElementById('winnie-thinking') as HTMLImageElement).src = 'assets/images/mediu/yes.gif';
         setTimeout(() => {
           (document.getElementById('winnie-thinking') as HTMLImageElement).src = 'assets/images/mediu/winnie-loop.gif';
-
+          if (this.level < 3) {
+            this.router.navigate(['/mediu', this.level + 1]);
+          } else {
+            this.router.navigate(['/limba', 1]);
+          }
         }, 2200);
-        // add happy winnie
-        if (this.level < 3) {
-          this.router.navigate(['/mediu', this.level + 1]);
-        } else {
-          this.router.navigate(['/limba', 1]);
-        }
         break;
       }
       default: {
@@ -109,11 +107,11 @@ export class MediuComponent implements OnInit {
     }
   }
 
-  over(): void{
-      this.sound.play();
+  over(): void {
+    this.sound.play();
   }
 
-  out(): void{
+  out(): void {
     this.sound.stop();
   }
 }

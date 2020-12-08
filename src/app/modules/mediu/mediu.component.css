@@ -32,7 +32,6 @@ h1:hover {
 
 h2 {
   color: #000000;
-  font-size: 30px;
   text-align: center;
 }
 
@@ -53,3 +52,9 @@ h2:hover {
   margin-right: auto;
 }
 
+.bar {
+  position: absolute;
+  width: 90%;
+  margin-left: 50px;
+  bottom: 50px;
+}

@@ -1,25 +1,30 @@
 <div class="background">
-    <h1 (mouseover)='over()' (mouseout)='out()' >Apasa pe imaginea cu forma de {{forma}}</h1>
+  <h1 (mouseout)='out()' (mouseover)='over()'>Apasa pe imaginea cu forma de {{forma}}</h1>
 
-    <div id="how_to" >
-        <img  [src]=path alt="winnie" id="how_to_img">
-    </div>
+  <div id="how_to">
+    <img [src]=path alt="winnie" id="how_to_img">
+  </div>
 
 
-    <div class="winnieHappy"  id="happy">
-        <img  src="assets/images/forme/winnie_waiting.png" alt="winnie" id="winnie">
-    </div>
-   
-    <div class="circleDiv" (click)='check(1)' >
-        <img src="assets/images/forme/circle_1.png" id ="choice1" alt="jar" class="img">
-    </div>
+  <div class="winnieHappy" id="happy">
+    <img alt="winnie" id="winnie" src="assets/images/forme/winnie_waiting.png">
+  </div>
 
-    <div class="squareDiv" (click)='check(2)' >
-        <img src="assets/images/forme/square_1.png"  id ="choice2" alt="winnie" class="img">
-    </div>
+  <div (click)='check(1)' class="circleDiv">
+    <img alt="jar" class="img" id="choice1" src="assets/images/forme/circle_1.png">
+  </div>
 
-    <div class="triangleDiv" (click)='check(3)'  >
-        <img src="assets/images/forme/triangle_1.png" id ="choice3"  alt="winnie" class="img">
-    </div>
-<router-outlet></router-outlet>
+  <div (click)='check(2)' class="squareDiv">
+    <img alt="winnie" class="img" id="choice2" src="assets/images/forme/square_1.png">
+  </div>
 
+  <div (click)='check(3)' class="triangleDiv">
+    <img alt="winnie" class="img" id="choice3" src="assets/images/forme/triangle_1.png">
+  </div>
+
+  <div class="bar">
+    <mat-progress-bar [value]=progress mode="determinate"></mat-progress-bar>
+  </div>
+  <router-outlet></router-outlet>
+
+</div>

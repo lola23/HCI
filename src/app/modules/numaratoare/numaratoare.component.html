@@ -5,11 +5,11 @@
   <h1 (mouseout)='out()' (mouseover)='over()' id="l1h1">Winnie vrea sa manance 3 borcane de miere</h1>
   <h2 (mouseout)='out()' (mouseover)='over()' id="l1h2">Apasa pe turnul care are 3 borcane de miere si ajuta-l pe
     Winnie</h2>
-  <h1 (mouseout)='out()' (mouseover)='over()'  id="ajuta">Ajuta-l pe Winnie {{obiect}}</h1>
-  <h2 (mouseout)='out()' (mouseover)='over()'  id="apasa">Apasa cu mouse-ul pe numarul corect</h2>
-  <h2 (mouseout)='out()' (mouseover)='over()'  id="cati">{{obiectCat}} poti numara?</h2>
+  <h1 (mouseout)='out()' (mouseover)='over()' id="ajuta">Ajuta-l pe Winnie {{obiect}}</h1>
+  <h2 (mouseout)='out()' (mouseover)='over()' id="apasa">Apasa cu mouse-ul pe numarul corect</h2>
+  <h2 (mouseout)='out()' (mouseover)='over()' id="cati">{{obiectCat}} poti numara?</h2>
   <div class="winniediv" id="winnied">
-    <img  alt="winnie" id="winnie" src="assets/images/Rectangle 19.png">
+    <img alt="winnie" id="winnie" src="assets/images/Rectangle 19.png">
     <!-- <img  alt="winnie" id="winnie" src="assets/images/poohflower.gif"> -->
   </div>
   <div class="winnieSad" id="sad">
@@ -22,19 +22,19 @@
 
   <!-- <ng-container *ngIf="id1"> -->
 
-  <div (click)='jar(1)' id="jar1" class="jar">
+  <div (click)='jar(1)' class="jar" id="jar1">
     <img alt="jar" class="jar1" src="assets/images/honeyjar 1.png">
   </div>
   <div id="wrong">
     <img alt="x" id="x" src="assets/images/x.png">
   </div>
-  <div (click)='jar(2)' id="jar2" class="jar2">
+  <div (click)='jar(2)' class="jar2" id="jar2">
     <img alt="jar2" class="jar2img" src="assets/images/Group 4.png">
   </div>
   <div id="wrong2">
     <img alt="x" id="x" src="assets/images/x.png">
   </div>
-  <div (click)='jar(3)' id="jar3" class="jar3">
+  <div (click)='jar(3)' class="jar3" id="jar3">
     <img alt="jar3" class="jar3img" src="assets/images/Group 5.png">
   </div>
   <div id="bravo">
@@ -43,7 +43,7 @@
   <!-- </ng-container> -->
   <!-- <ng-container *ngIf="id2"> -->
   <div id="ghioceidiv">
-    <img alt="ghiocei" id="ghiocei" [src]=path>
+    <img [src]=path alt="ghiocei" id="ghiocei">
   </div>
   <div (click)='ghiocei(1)' id="number1div">
     <img alt="1" id="number1" src="assets/images/Group 1.png">
@@ -66,6 +66,10 @@
   </div>
   <div id="wrong3gh">
     <img alt="x" id="x" src="assets/images/x.png">
+  </div>
+
+  <div class="bar">
+    <mat-progress-bar [value]=progress mode="determinate"></mat-progress-bar>
   </div>
   <!-- </ng-container> -->
 </div>
