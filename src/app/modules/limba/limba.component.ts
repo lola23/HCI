@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import {DialogGresealaComponent} from '../../shared/dialog-greseala/dialog-greseala.component';
@@ -28,15 +28,16 @@ export class LimbaComponent implements OnInit {
   option2;
   option3;
   answer;
-  progress;
+  progress = 84;
   wrong1 = false;
   wrong2 = false;
   wrong3 = false;
   dialogRef;
 
   constructor(private readonly route: ActivatedRoute,
-    private readonly router: Router,
-    public readonly dialog: MatDialog) { }
+              private readonly router: Router,
+              public readonly dialog: MatDialog) {
+  }
 
 
   ngOnInit(): void {
@@ -44,76 +45,73 @@ export class LimbaComponent implements OnInit {
       this.level = parseInt(params.id, 10);
       this.resetWrongs();
       switch (this.level) {
-        case 1:
-        {
-            this.cerinta = new Howl({
-                               src: ['assets/audio/limba/cerinta1.m4a'],
-                               volume: 1,
-                               });
+        case 1: {
+          this.cerinta = new Howl({
+            src: ['assets/audio/limba/cerinta1.m4a'],
+            volume: 1,
+          });
 
-            this.option1audio = new Howl({
-                              src: ['assets/audio/limba/option11.m4a'],
-                              volume: 1,
-                              });
-            this.option2audio = new Howl({
-                              src: ['assets/audio/limba/option12.m4a'],
-                              volume: 1,
-                              });
-            this.option3audio = new Howl({
-                              src: ['assets/audio/limba/option13.m4a'],
-                              volume: 1,
-                              });
+          this.option1audio = new Howl({
+            src: ['assets/audio/limba/option11.m4a'],
+            volume: 1,
+          });
+          this.option2audio = new Howl({
+            src: ['assets/audio/limba/option12.m4a'],
+            volume: 1,
+          });
+          this.option3audio = new Howl({
+            src: ['assets/audio/limba/option13.m4a'],
+            volume: 1,
+          });
 
-              this.modul.play();
-              this.modul.on('end', () =>{
-                 this.cerinta.play();
-              });
-              this.loadLevel1();
-              break;
-        }
-        case 2:
-        {
-            this.cerinta = new Howl({
-                            src: ['assets/audio/limba/cerinta2.m4a'],
-                            volume: 1,
-                            });
-            this.option1audio = new Howl({
-                              src: ['assets/audio/limba/option21.m4a'],
-                              volume: 1,
-                               });
-            this.option2audio = new Howl({
-                          src: ['assets/audio/limba/option22.m4a'],
-                          volume: 1,
-                          });
-            this.option3audio = new Howl({
-                          src: ['assets/audio/limba/option23.m4a'],
-                          volume: 1,
-                          });
+          this.modul.play();
+          this.modul.on('end', () => {
             this.cerinta.play();
-            this.loadLevel2();
-            break;
+          });
+          this.loadLevel1();
+          break;
         }
-        case 3:
-        {
-            this.cerinta = new Howl({
-                              src: ['assets/audio/limba/cerinta2.m4a'],
-                              volume: 1,
-                              });
-            this.option1audio = new Howl({
-                              src: ['assets/audio/limba/option31.m4a'],
-                              volume: 1,
-                              });
-            this.option2audio = new Howl({
-                              src: ['assets/audio/limba/option32.m4a'],
-                              volume: 1,
-                              });
-            this.option3audio = new Howl({
-                              src: ['assets/audio/limba/option33.m4a'],
-                              volume: 1,
-                              });
-            this.cerinta.play();
-            this.loadLevel3();
-            break;
+        case 2: {
+          this.cerinta = new Howl({
+            src: ['assets/audio/limba/cerinta2.m4a'],
+            volume: 1,
+          });
+          this.option1audio = new Howl({
+            src: ['assets/audio/limba/option21.m4a'],
+            volume: 1,
+          });
+          this.option2audio = new Howl({
+            src: ['assets/audio/limba/option22.m4a'],
+            volume: 1,
+          });
+          this.option3audio = new Howl({
+            src: ['assets/audio/limba/option23.m4a'],
+            volume: 1,
+          });
+          this.cerinta.play();
+          this.loadLevel2();
+          break;
+        }
+        case 3: {
+          this.cerinta = new Howl({
+            src: ['assets/audio/limba/cerinta3.m4a'],
+            volume: 1,
+          });
+          this.option1audio = new Howl({
+            src: ['assets/audio/limba/option31.m4a'],
+            volume: 1,
+          });
+          this.option2audio = new Howl({
+            src: ['assets/audio/limba/option32.m4a'],
+            volume: 1,
+          });
+          this.option3audio = new Howl({
+            src: ['assets/audio/limba/option33.m4a'],
+            volume: 1,
+          });
+          this.cerinta.play();
+          this.loadLevel3();
+          break;
         }
       }
     });
@@ -121,50 +119,50 @@ export class LimbaComponent implements OnInit {
 
   loadLevel1(): void {
 
-    this.sentence = '   Ghioceii sunt ...'
+    this.sentence = '   Ghioceii sunt ...';
     this.option1 = 'gingași';
     this.option2 = 'roz';
     this.option3 = 'murdari';
     this.answer = 1;
-    this.progress = 0;
   }
 
   loadLevel2(): void {
 
-    this.sentence = '   Păsările sunt ..'
+    this.sentence = '   Păsările sunt ..';
     this.option1 = 'albastre';
     this.option2 = 'vorbărețe';
     this.option3 = 'călătoare';
 
     this.answer = 3;
-    this.progress = 20;
+    this.progress = 91;
   }
 
   loadLevel3(): void {
 
-    this.sentence = '   Copacii sunt ...'
+    this.sentence = '   Copacii sunt ...';
     this.option1 = 'aurii';
     this.option2 = 'înfloriți';
     this.option3 = 'călători';
     this.answer = 2;
-    this.progress = 40;
+    this.progress = 98;
   }
 
   handleClick(index: number): void {
     switch (index) {
-      case this.answer:
-      {
+      case this.answer: {
         this.openCorrectDialog();
         if (this.level < 3) {
-          this.router.navigate(['/limba', this.level + 1]);
+          this.dialogRef.afterClosed().subscribe( () =>
+          {
+            this.router.navigate(['/limba', this.level + 1]);
+          });
         } else {
-          //this.router.navigate(['/numaratore',1]);
+          this.progress = 100;
         }
         break;
       }
-      default:
-      {
-      this.openWrongDialog();
+      default: {
+        this.openWrongDialog();
         if (index === 1) {
           this.wrong1 = true;
         }
@@ -179,7 +177,7 @@ export class LimbaComponent implements OnInit {
     }
   }
 
- openCorrectDialog(): void {
+  openCorrectDialog(): void {
     this.stopAllSounds();
     this.dialogRef = this.dialog.open(DialogCorectComponent, {
       disableClose: true,
@@ -193,7 +191,7 @@ export class LimbaComponent implements OnInit {
     });
   }
 
- openWrongDialog(): void {
+  openWrongDialog(): void {
     this.stopAllSounds();
     this.dialogRef = this.dialog.open(DialogGresealaComponent, {
       disableClose: true,
@@ -214,35 +212,35 @@ export class LimbaComponent implements OnInit {
   }
 
   playModul(): void {
-       this.stopAllSounds();
-       this.modul.play();
-    }
+    this.stopAllSounds();
+    this.modul.play();
+  }
 
-    playCerinta(): void {
-        this.stopAllSounds();
-        this.cerinta.play();
-    }
+  playCerinta(): void {
+    this.stopAllSounds();
+    this.cerinta.play();
+  }
 
-    playOption1(): void{
-          this.stopAllSounds();
-          this.option1audio.play();
-    }
+  playOption1(): void {
+    this.stopAllSounds();
+    this.option1audio.play();
+  }
 
-    playOption2(): void{
-          this.stopAllSounds();
-          this.option2audio.play();
-    }
+  playOption2(): void {
+    this.stopAllSounds();
+    this.option2audio.play();
+  }
 
-    playOption3(): void{
-        this.stopAllSounds();
-        this.option3audio.play();
-    }
+  playOption3(): void {
+    this.stopAllSounds();
+    this.option3audio.play();
+  }
 
-    stopAllSounds(): void {
-        this.modul.stop();
-        this.cerinta.stop();
-        this.option1audio.stop();
-        this.option2audio.stop();
-        this.option3audio.stop();
-      }
+  stopAllSounds(): void {
+    this.modul.stop();
+    this.cerinta.stop();
+    this.option1audio.stop();
+    this.option2audio.stop();
+    this.option3audio.stop();
+  }
 }
