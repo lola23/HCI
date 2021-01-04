@@ -57,6 +57,11 @@ export class MediuComponent implements OnInit {
     });
   }
 
+  stopAllSound(){
+    this.congratsSound.stop();
+    this.tryAgainSound.stop();
+    this.sound.stop();
+  }
   loadLevel1(): void {
     console.log('Loading level');
     this.answer = 1;
@@ -83,6 +88,7 @@ export class MediuComponent implements OnInit {
   handleClick(index: number): void {
     switch (index) {
       case this.answer: {
+        this.stopAllSound();
         this.congratsSound.play();
         (document.getElementById('winnie-thinking') as HTMLImageElement).src = 'assets/images/mediu/yes.gif';
         setTimeout(() => {
@@ -96,6 +102,7 @@ export class MediuComponent implements OnInit {
         break;
       }
       default: {
+        this.stopAllSound();
         this.tryAgainSound.play();
         (document.getElementById('winnie-thinking') as HTMLImageElement).src = 'assets/images/mediu/no.gif';
         setTimeout(() => {
@@ -108,6 +115,7 @@ export class MediuComponent implements OnInit {
   }
 
   over(): void {
+    this.stopAllSound();
     this.sound.play();
   }
 

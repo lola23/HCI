@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import { Howl } from 'howler';
 
 @Component({
   selector: 'app-forma-geometrica',
@@ -12,6 +13,42 @@ export class FormaGeometricaComponent implements OnInit {
   forma = 'triunghi';
   level = 1;
   progress = 42;
+  soundBravo =
+    new Howl({
+
+      src: ['assets/audio/bravo.mp3'],
+
+      volume: 1
+
+    });
+  soundIncerca = new Howl({
+
+    src: ['assets/audio/maiIncearca.mp3'],
+
+    volume: 1,
+
+  });
+  soundCerc = new Howl({
+
+    src: ['assets/audio/cerc.mp3'],
+
+    volume: 1,
+
+  });
+  soundPatrat = new Howl({
+
+    src: ['assets/audio/patrat.mp3'],
+
+    volume: 1,
+
+  });
+  soundTriunghi = new Howl({
+
+    src: ['assets/audio/triunghi.mp3'],
+
+    volume: 1,
+
+  });
 
   constructor(private readonly route: ActivatedRoute,
               private readonly router: Router) {
@@ -24,14 +61,17 @@ export class FormaGeometricaComponent implements OnInit {
       switch (this.level) {
         case 1: {
           this.loadLevel1();
+          
           break;
         }
         case 2: {
           this.loadLevel2();
+         
           break;
         }
         case 3: {
           this.loadLevel3();
+          
           break;
         }
       }
@@ -47,6 +87,7 @@ export class FormaGeometricaComponent implements OnInit {
     this.setImagesForLevel1();
     (document.getElementById('winnie') as HTMLImageElement).src = 'assets/images/forme/winnie_waiting.png';
     document.getElementById('how_to').hidden = true;
+    this.soundTriunghi.play();
   }
 
   loadLevel2(): void {
@@ -58,9 +99,11 @@ export class FormaGeometricaComponent implements OnInit {
     (document.getElementById('winnie') as HTMLImageElement).src = 'assets/images/forme/winnie_waiting.png';
     document.getElementById('how_to').hidden = true;
     this.progress = 49;
+    this.soundCerc.play();
   }
 
   loadLevel3(): void {
+
     this.level = 3;
     this.path = 'assets/images/forme/how_to_draw_square.gif';
     this.forma = 'patrat';
@@ -68,7 +111,9 @@ export class FormaGeometricaComponent implements OnInit {
     (document.getElementById('winnie') as HTMLImageElement).src = 'assets/images/forme/winnie_waiting.png';
     document.getElementById('how_to').hidden = true;
     this.progress = 56;
+    this.soundPatrat.play();
   }
+
 
   over(): void {
   }
@@ -93,16 +138,28 @@ export class FormaGeometricaComponent implements OnInit {
     (document.getElementById('choice2') as HTMLImageElement).src = 'assets/images/forme/square_2.png';
     (document.getElementById('choice3') as HTMLImageElement).src = 'assets/images/forme/triangle_1.png';
   }
+  stopAllSound(){
+    this.soundIncerca.stop();
+    this.soundCerc.stop();
+    this.soundBravo.stop();
+    this.soundPatrat.stop();
+    this.soundTriunghi.stop();
+    
+  }
 
   check(a): void {
     if (this.level === 1) {
       if (a !== 3) {
+        this.stopAllSound();
+        this.soundIncerca.play();
         document.getElementById('how_to').hidden = false;
         setTimeout(() => {
           (document.getElementById('how_to_img') as HTMLImageElement).src = this.path;
           document.getElementById('how_to').hidden = true;
         }, 7000);
       } else {
+        this.stopAllSound();
+        this.soundBravo.play();
         (document.getElementById('winnie') as HTMLImageElement).src = 'assets/images/forme/well_done.gif';
         setTimeout(() => {
           (document.getElementById('winnie') as HTMLImageElement).src = 'assets/images/forme/winnie_waiting.png';
@@ -113,12 +170,16 @@ export class FormaGeometricaComponent implements OnInit {
     } else {
       if (this.level === 2) {
         if (a !== 1) {
+          this.stopAllSound();
+          this.soundIncerca.play();
           document.getElementById('how_to').hidden = false;
           setTimeout(() => {
             (document.getElementById('how_to_img') as HTMLImageElement).src = this.path;
             document.getElementById('how_to').hidden = true;
           }, 1500);
         } else {
+          this.stopAllSound();
+          this.soundBravo.play();
           (document.getElementById('winnie') as HTMLImageElement).src = 'assets/images/forme/well_done.gif';
           setTimeout(() => {
             (document.getElementById('winnie') as HTMLImageElement).src = 'assets/images/forme/winnie_waiting.png';
@@ -129,12 +190,16 @@ export class FormaGeometricaComponent implements OnInit {
       } else {
         if (this.level === 3) {
           if (a !== 2) {
+            this.stopAllSound();
+            this.soundIncerca.play();
             document.getElementById('how_to').hidden = false;
             setTimeout(() => {
               (document.getElementById('how_to_img') as HTMLImageElement).src = this.path;
               document.getElementById('how_to').hidden = true;
             }, 2300);
           } else {
+            this.stopAllSound();
+            this.soundBravo.play();
             (document.getElementById('winnie') as HTMLImageElement).src = 'assets/images/forme/well_done.gif';
             setTimeout(() => {
               (document.getElementById('winnie') as HTMLImageElement).src = 'assets/images/forme/winnie_waiting.png';

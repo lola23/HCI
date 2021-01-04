@@ -10,7 +10,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: url(src/assets/images/background.png) center center;
+  background: url(src/assets/images/fundal/background.png) center center;
   background-size: cover;
   opacity: .4;
   width: 100%;
@@ -39,8 +39,8 @@
 }
 
 img {
-  height: 500px;
-  width: 300px;
+  height: 400px;
+  width: 200px;
 }
 
 .bar {
@@ -80,7 +80,7 @@ h2:hover {
 .winnie {
   position: absolute;
   top: 2%;
-  right: 15%;
+  right: 5%;
 }
 
 .winnie img {

@@ -9,7 +9,7 @@
 
 .background::before {
   content: "";
-  background-image: url("src/assets/images/background.png");
+  background-image: url("src/assets/images/fundal/background.png");
   background-size: cover;
   position: absolute;
   top: 0;

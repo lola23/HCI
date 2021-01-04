@@ -25,6 +25,13 @@ export class NumaratoareComponent implements OnInit {
     volume: 1,
 
   });
+  soundBerze=new Howl({
+
+    src: ['assets/audio/cateberze.mp3'],
+
+    volume: 1,
+
+  });
   soundBravo =
     new Howl({
 
@@ -75,6 +82,7 @@ export class NumaratoareComponent implements OnInit {
         }
         case 3: {
           this.loadLevel3();
+          this.soundBerze.play();
 
           break;
         }
@@ -126,7 +134,7 @@ export class NumaratoareComponent implements OnInit {
     document.getElementById('number1div').hidden = false;
     document.getElementById('number2div').hidden = false;
     document.getElementById('number3div').hidden = false;
-    this.path = 'assets/images/berze1.jpg';
+    this.path = 'assets/images/insta5.gif';
     this.obiect = 'sa gaseasca toate berzele';
     this.obiectCat = 'Cate berze';
     this.progress = 35;
@@ -236,6 +244,7 @@ export class NumaratoareComponent implements OnInit {
     this.soundBravo.stop();
     this.soundGhiocei.stop();
     this.soundIncerca.stop();
+    this.soundBerze.stop();
   }
 
   jar(a): void {
@@ -298,20 +307,42 @@ export class NumaratoareComponent implements OnInit {
   }
 
   over(): void {
+    this.stopAllSounds();
     if (this.level === 1) {
 
-      this.sound.play();
+        this.sound.play();
+
+     
     } else if (this.level === 2) {
-      this.soundGhiocei.play();
+
+        this.soundGhiocei.play();
+
+      
+    }else{
+
+          this.soundBerze.play();
+
     }
   }
 
   out(): void {
     if (this.level === 1) {
-      this.sound.stop();
+  
+        this.sound.stop();
+      
+      
     } else if (this.level === 2) {
-      this.soundGhiocei.stop();
+
+        this.soundGhiocei.stop();
+    
+     
     }
+    else{
+
+        this.soundBerze.stop();
+
+    }
+
   }
 
 }

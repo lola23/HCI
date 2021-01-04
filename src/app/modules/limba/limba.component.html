@@ -9,9 +9,18 @@
     </div>
   </div>
   <div class="gallery" style="text-align: center; height: 350px;">
-    <h2 (click)="handleClick(1)" (mouseover)="playOption1()" [innerHtml]="option1" class="bordered"></h2>
-    <h2 (click)="handleClick(2)" (mouseover)="playOption2()" [innerHtml]="option2" class="bordered"></h2>
-    <h2 (click)="handleClick(3)" (mouseover)="playOption3()" [innerHtml]="option3" class="bordered"></h2>
+    <div (click)="handleClick(1)" (mouseover)="playOption1()" class="bordered">
+    <h2  [innerHtml]="option1" ></h2>
+    <img [src]=image1 alt="Image 1">
+</div>
+<div (click)="handleClick(2)" (mouseover)="playOption2()" class="bordered">
+    <h2  [innerHtml]="option2"></h2>
+    <img [src]=image2 alt="Image 2">
+    </div>
+    <div (click)="handleClick(3)" (mouseover)="playOption3()" class="bordered">
+    <h2  [innerHtml]="option3"></h2>
+    <img [src]=image3 alt="Image 3">
+  </div>
   </div>
   <div class="bar">
     <mat-progress-bar [value]=progress mode="determinate"></mat-progress-bar>

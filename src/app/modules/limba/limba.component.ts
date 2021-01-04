@@ -21,7 +21,9 @@ export class LimbaComponent implements OnInit {
   option1audio;
   option2audio;
   option3audio;
-
+  image1;
+  image2;
+  image3;
   level;
   sentence;
   option1;
@@ -123,6 +125,9 @@ export class LimbaComponent implements OnInit {
     this.option1 = 'gingași';
     this.option2 = 'roz';
     this.option3 = 'murdari';
+    this.image1 = 'assets/images/vestitorii/ghiocel.png';
+    this.image2='assets/images/pink.png';
+    this.image3='assets/images/dirty.png';
     this.answer = 1;
   }
 
@@ -132,7 +137,9 @@ export class LimbaComponent implements OnInit {
     this.option1 = 'albastre';
     this.option2 = 'vorbărețe';
     this.option3 = 'călătoare';
-
+    this.image1='assets/images/blue.gif';
+    this.image2='assets/images/vorbarete.png';
+    this.image3='assets/images/vestitorii/barza.png';
     this.answer = 3;
     this.progress = 91;
   }
@@ -143,6 +150,9 @@ export class LimbaComponent implements OnInit {
     this.option1 = 'aurii';
     this.option2 = 'înfloriți';
     this.option3 = 'călători';
+    this.image1='assets/images/auriu.png';
+    this.image2='assets/images/infloriti.png';
+    this.image3='assets/images/vestitorii/barza.png';
     this.answer = 2;
     this.progress = 98;
   }
