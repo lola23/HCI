@@ -57,7 +57,7 @@ export class MediuComponent implements OnInit {
     });
   }
 
-  stopAllSound(){
+  stopAllSound(): void {
     this.congratsSound.stop();
     this.tryAgainSound.stop();
     this.sound.stop();

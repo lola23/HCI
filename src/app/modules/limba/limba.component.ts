@@ -168,6 +168,7 @@ export class LimbaComponent implements OnInit {
           });
         } else {
           this.progress = 100;
+          this.router.navigate(['/final']);
         }
         break;
       }

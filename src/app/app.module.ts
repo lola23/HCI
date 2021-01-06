@@ -15,6 +15,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {DialogGresealaComponent} from './shared/dialog-greseala/dialog-greseala.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DialogCorectComponent} from './shared/dialog-corect/dialog-corect.component';
+import {FinalComponent} from './modules/final/final.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {DialogCorectComponent} from './shared/dialog-corect/dialog-corect.compon
     LimbaComponent,
     MediuComponent,
     DialogGresealaComponent,
-    DialogCorectComponent
+    DialogCorectComponent,
+    FinalComponent
   ],
   imports: [
     BrowserModule,
